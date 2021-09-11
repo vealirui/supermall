@@ -22,7 +22,7 @@ import CheckButton from 'components/content/checkButton/CheckButton.vue';
 import {mapGetters} from 'vuex'
 
 export default {
-  name:'CartBottomBar.vue',
+  name:'CartBottomBar',
   components:{
     CheckButton
   },

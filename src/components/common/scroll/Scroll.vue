@@ -31,6 +31,9 @@
     mounted() {
       // 1.创建BScroll对象
       this.scroll = new BScroll(this.$refs.wrapper, {
+        mouseWheel: true,//开启鼠标滚轮
+        disableMouse: false,//启用鼠标拖动
+        disableTouch: false,
         click: true,
         probeType: this.probeType,
         pullUpLoad: this.pullUpLoad

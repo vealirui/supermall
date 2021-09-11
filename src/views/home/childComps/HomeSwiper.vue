@@ -1,6 +1,7 @@
 <template>
   <swiper>
-    <swiper-item v-for="item in banners">
+    <swiper-item v-for="(item,index) in banners" :key="index"
+        @load="swiperImageLoad">
       <a :href="item.link">
         <img :src="item.image" alt="" @load="imageLoad">
       </a>
@@ -23,7 +24,8 @@
     },
     data() {
       return {
-        isLoad: false
+        isLoad: false,
+        length:0
       }
     },
     components: {
@@ -36,6 +38,9 @@
           this.$emit('swiperImageLoad')
           this.isLoad = true
         }
+      },
+      swiperImageLoad(){
+        this.$emit('swiperImageLoad');
       }
     }
   }

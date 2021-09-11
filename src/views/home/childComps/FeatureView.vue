@@ -14,6 +14,8 @@
 
 <style scoped>
   .feature img {
+    position: relative;
+    left: 1px;
     width: 100%;
   }
 </style>

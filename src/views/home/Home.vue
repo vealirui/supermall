@@ -73,11 +73,18 @@
     },
     activated() {
       this.$refs.scroll.refresh()
-      this.$refs.scroll.scrollTo(0, this.saveY, 50)
+      this.$refs.scroll.scrollTo(0, this.saveY, 0)
+      document.addEventListener('visibilitychange', () => {
+      if(document.hidden) {
+        document.title = '不要离开我'
+      }else {
+        document.title = '你又回来了'
+      }
+    })
     },
     deactivated() {
       this.saveY = this.$refs.scroll.getScrollY()
-      this.$bus.$off('itemImageLoad',this.itemListener);
+      // this.$bus.$off('itemImageLoad',this.itemListener);
       // console.log(this.saveY)
     },
     created() {
@@ -90,7 +97,9 @@
       this.getHomeGoods('sell')
     },
     mounted() {
+      console.log(this.goods)
       // 1.图片加载完成的事件监听
+      console.log(this.$refs.scroll)
     },
     methods: {
       /**
@@ -143,6 +152,10 @@
           this.$refs.scroll.finishPullUp()
         })
       }
+    },
+    destroyed() {
+      document.removeEventListener('visibilitychange');
+      this.$bus.$off('itemImageLoad', this.itemListener);
     }
   }
 </script>

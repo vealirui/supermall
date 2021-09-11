@@ -118,6 +118,8 @@ export default {
         this.commentInfo = data.rate.list[0];
       }
       this.$nextTick(() => {});
+      //this.$nextTick作用：在下次dom更新循环结束之后执行延迟回调。
+      //在修改数据之后立即使用这个方法，获得更新后的dom。
     }),
       getRecommend().then((res) => {
         this.recommends = res.data.list;

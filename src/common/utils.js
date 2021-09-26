@@ -32,3 +32,12 @@ function padLeftZero (str) {
   return ('00' + str).substr(str.length);
 };
 
+/* export function debounce(fn, delay) {
+  let timer = null;
+  return function() {
+    if(timer) clearTimeout(timer);
+    setTimeout(() => {
+      fn.apply(this, [...arguments])
+    }, delay)
+  }
+} */

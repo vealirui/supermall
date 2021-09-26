@@ -42,6 +42,8 @@
         // 答: 因为如果在项目中, 多处都用到了grid-view, 那么这里就不确定获取的是哪一个了.
         let gridEl = this.$refs.gridView;
         let children = gridEl.children;
+        console.log(gridEl.clientWidth);
+        console.log(children);
 
         // 2.设置gridEl的内边距
         gridEl.style.padding = `${this.vMargin}px ${this.hMargin}px`

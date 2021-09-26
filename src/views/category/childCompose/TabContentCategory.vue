@@ -28,9 +28,6 @@ export default {
 </script>
 
 <style scoped> 
-  .panel img {
-    width: 100%;
-  }
 
   .item {
     text-align: center;

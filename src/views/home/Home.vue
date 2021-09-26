@@ -97,9 +97,9 @@
       this.getHomeGoods('sell')
     },
     mounted() {
-      console.log(this.goods)
+      // console.log(this.goods)
       // 1.图片加载完成的事件监听
-      console.log(this.$refs.scroll)
+      // console.log(this.$refs.scroll)
     },
     methods: {
       /**

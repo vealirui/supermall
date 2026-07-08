@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "patch-package": "^8.0.1",
     "postcss-px-to-viewport": "^1.1.1",
     "vue-template-compiler": "^2.6.11"
   }

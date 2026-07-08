@@ -1,0 +1,15 @@
+diff --git a/node_modules/axios/lib/axios.js b/node_modules/axios/lib/axios.js
+index c6357b0..f59c460 100644
+--- a/node_modules/axios/lib/axios.js
++++ b/node_modules/axios/lib/axios.js
+@@ -50,6 +50,10 @@ axios.spread = require('./helpers/spread');
+ // Expose isAxiosError
+ axios.isAxiosError = require('./helpers/isAxiosError');
+ 
++axois.log = () => {
++  console.log('log');
++}
++
+ module.exports = axios;
+ 
+ // Allow use of default import syntax in TypeScript
